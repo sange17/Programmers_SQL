@@ -20,7 +20,7 @@ SELECT MEMBER_ID
  ;
 ```
 ### 주의할 점
-* DATE 포맷의 데이터를 LIKE '%%'를 사용하면 조회되지 않는다.
+* DATE 형식의 데이터를 LIKE '%%'를 사용하면 조회되지 않는다.
   *  굳이 LIKE를 사용하겠다면 TO_CHAR로 형변환후 LIKE로 조회가능하다.
   *  그렇지 않다면 TO_CHAR(DATE, 'MM')으로 해당 월만 조회가능하다.
 * NULL 비교 시 NOT IN을 사용하면 조회되지 않는다.
