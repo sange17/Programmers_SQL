@@ -1,11 +1,9 @@
 # Programmers_SQL
-프로그래머스 스쿨 SQL Kit 풀이
+프로그래머스 스쿨 SQL Kit 풀이(틀린 부분 지적해주시면 감사하겠습니다.)
 
 # 1. SELECT
 
 ## 3월에 태어난 여성 회원 목록 출력하기
-* 틀린 부분 지적해주시면 감사하겠습니다.
----
 
 ```
 SELECT MEMBER_ID
