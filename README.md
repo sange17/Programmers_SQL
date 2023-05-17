@@ -25,3 +25,20 @@ SELECT MEMBER_ID
   *  그렇지 않다면 TO_CHAR(DATE, 'MM')으로 해당 월만 조회가능하다.
 * NULL 비교 시 NOT IN을 사용하면 조회되지 않는다.
   * NULL 비교는 NOT IN 대신 IS NOT NULL을 사용하여 조회한다.
+
+
+## 과일로 만든 아이스크림 고르기
+
+```
+SELECT A.FLAVOR
+  FROM FIRST_HALF A
+       , ICECREAM_INFO B
+ WHERE A.FLAVOR = B.FLAVOR
+   AND A.TOTAL_ORDER > 3000
+   AND B.INGREDIENT_TYPE = 'fruit_based'
+ ORDER BY TOTAL_ORDER DESC
+ ;
+```
+### 주의할 점
+* ORDER BY 정렬 기본 조건은 ASC(오름차순)이다.
+  *  문제는 높은 수부터 첫 행부터 출력하는 것이므로 DESC(내림차순)으로 조회가능하다.
