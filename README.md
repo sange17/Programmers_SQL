@@ -4,7 +4,7 @@
 
 # 1. SELECT
 
-## 3월에 태어난 여성 회원 목록 출력하기
+## 🧩3월에 태어난 여성 회원 목록 출력하기
 
 ```
 SELECT MEMBER_ID
@@ -27,7 +27,7 @@ SELECT MEMBER_ID
   * NULL 비교는 NOT IN 대신 IS NOT NULL을 사용하여 조회한다.
 
 
-## 과일로 만든 아이스크림 고르기
+## 🧩과일로 만든 아이스크림 고르기
 
 ```
 SELECT A.FLAVOR
