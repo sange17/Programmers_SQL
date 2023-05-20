@@ -63,3 +63,36 @@ SELECT A.TITLE
 ```
 ### 주의할 점
 * TO_CHAR를 활용하여 문제의 결과에 맞는 DATE 형식의 데이터를 출력해야한다.
+
+
+## 🧩강원도에 위치한 생산공장 목록 출력하기
+```
+SELECT FACTORY_ID
+       , FACTORY_NAME
+       , ADDRESS
+  FROM FOOD_FACTORY
+ WHERE ADDRESS LIKE '강원도%'
+ ORDER BY FACTORY_ID ASC
+;
+```
+### 주의할 점
+* LIKE 문을 활용하여 원하는 주소의 결과만 출력해야한다.
+  * '(단어)%' : 단어로 시작되는 데이터 출력
+  * '%(단어)%' : 단어가 포함되는 데이터 출력
+  * '%(단어)' : 단어로 끝나는 데이터 출력
+
+
+## 🧩흉부외과 또는 일반외과 의사 목록 출력하기
+```
+SELECT DR_NAME
+       , DR_ID
+       , MCDP_CD
+       , TO_CHAR(HIRE_YMD, 'YYYY-MM-DD')
+  FROM DOCTOR
+ WHERE MCDP_CD IN ('CS', 'GS')
+ ORDER BY HIRE_YMD DESC
+          , DR_NAME ASC
+;
+```
+### 주의할 점
+* TO_CHAR를 활용하여 문제의 결과에 맞는 DATE 형식의 데이터를 출력해야한다.
